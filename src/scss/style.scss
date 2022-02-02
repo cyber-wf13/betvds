@@ -1,0 +1,25 @@
+//Создание миксинов и переменных
+@import 'helpers/mixins';
+@import 'helpers/vars';
+
+// Объявление стилей для всего проекта
+@import 'base/global';
+@import 'base/reset';
+@import 'base/fonts';
+@import 'components/btn';
+@import 'components/title';
+
+// Стили для компонентов
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'components/hero';
+@import 'components/advantage';
+@import 'components/card-advantage';
+@import 'components/about';
+@import 'components/tariffs';
+@import 'components/card-tariff';
+@import 'components/steps';
+@import 'components/step-info';
+@import 'components/list-steps';
+@import 'components/questions';
+@import 'components/popup';

@@ -1,0 +1,10 @@
+.steps{
+  background-color: transparent;
+  padding-bottom: 50px;
+  @media (max-width: 575.98px){
+    padding-bottom: 30px;
+  }
+  &__body{
+    margin-top: 40px;
+  }
+}

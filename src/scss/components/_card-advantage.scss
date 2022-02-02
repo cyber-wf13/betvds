@@ -1,0 +1,32 @@
+.card-advantage{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Roboto';
+  text-align: center;
+  @media (max-width: 767.98px){
+    margin: 10px 0;
+  }
+  &__img{
+    min-width: 120px;
+    min-height: 120px;
+  }
+  &__title{
+    font-weight: 700;
+    font-size: 36px;
+    color: $c-text-accent;
+    margin: 30px 0 20px;
+    max-width: 235px;
+  }
+  &__text{
+    font-weight: 400;
+    font-size: 20px;
+    color: #535353;
+    max-width: 345px;
+  }
+  &__text-accent{
+    display: block;
+    font-weight: 700;
+  }
+}
