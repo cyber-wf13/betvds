@@ -1,5 +1,5 @@
 .button {
-  width: 200px;
+  // width: 200px;
   height: 60px;
   border: 1px solid $c-accent;
   background-color: $c-accent;
@@ -9,8 +9,8 @@
   font-size: 26px;
   cursor: pointer;
   transition: all 0.3s;
-  @media (any-hover:hover){
-    &:hover{
+  @media (any-hover: hover) {
+    &:hover {
       transform: scale(1.1);
     }
   }

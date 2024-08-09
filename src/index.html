@@ -40,8 +40,8 @@
           <div class="popup__item">
             <div class="popup__head popup-head">
               <span class="popup-head__count">1</span>
-              <h4 class="popup-head__title">Выберите способ оплаты</h4>
-              <span class="popup-head__descr">Выберите для себя наиболее удобный способ</span>
+              <h4 class="popup-head__title">Виберіть спосіб оплати</h4>
+              <span class="popup-head__descr">Виберіть найбільш зручний для себе спосіб оплати</span>
             </div>
             <div class="popup__content">
               <div id="popup-carousel" class="carousel slide popup-carousel">
@@ -74,34 +74,33 @@
           <div class="popup__item">
             <div class="popup__head popup-head">
               <span class="popup-head__count">2</span>
-              <h4 class="popup-head__title">Введите свой корректный E-mail</h4>
-              <span class="popup-head__descr">На Вашу почту придут данные для подключения к VPS</span>
+              <h4 class="popup-head__title">Введіть свій коректний E-mail</h4>
+              <span class="popup-head__descr">На вашу почту прийдуть дані для підключення до VPS</span>
             </div>
             <div class="popup__content">
-              <input type="email" class="popup__input"
-                placeholder="E-mail (на него придут данные для подключения к VPS)" required form="form-popup">
+              <input type="email" class="popup__input" placeholder="E-mail" required form="form-popup">
             </div>
           </div>
           <div class="popup__item">
             <div class="popup__head popup-head">
               <span class="popup-head__count">3</span>
-              <h4 class="popup-head__title">Дополнительно</h4>
-              <span class="popup-head__descr">Выберите количество и введите промокод, если он есть</span>
+              <h4 class="popup-head__title">Додатково</h4>
+              <span class="popup-head__descr">Виберіть кількість та введіть промокод при наявності</span>
             </div>
             <div class="popup__content">
-              <input type="number" class="popup__input" placeholder="Введите приобретаемое количество" form="form-popup"
-                max="10" min="0" step="1">
+              <input type="number" class="popup__input" placeholder="Введіть кількість" form="form-popup" max="10"
+                min="0" step="1">
               <input type="text" class="popup__input" placeholder="Промокод" form="form-popup">
             </div>
           </div>
         </div>
         <div class="modal-footer">
           <form action="#" class="popup__form" id="form-popup">
-            <a href="#" class="popup__policy">Политика безопасности</a>
-            <button class="button popup__button">Перейти к оплате</button>
+            <a href="#" class="popup__policy">Політика безпеки</a>
+            <button class="button popup__button">Перейти до оплати</button>
             <div class="popup__total">
-              <p class="popup__total-text">Сумма к оплате (руб):
-                <span class="popup__total-count">2700</span>
+              <p class="popup__total-text">Всього до сплати:
+                <span class="popup__total-count">2700</span> грн
               </p>
             </div>
           </form>
@@ -136,13 +135,13 @@
                   <div class="collapse navbar-collapse justify-content-end" id="burger-menu">
                     <ul class="menu__list">
                       <li class="menu__list-item">
-                        <a class="menu__list-link" href="#">Придбати VDS</a>
+                        <a class="menu__list-link" href="#buy">Придбати VDS</a>
                       </li>
                       <li class="menu__list-item">
-                        <a class="menu__list-link" href="#">Про нас</a>
+                        <a class="menu__list-link" href="#about">Про нас</a>
                       </li>
                       <li class="menu__list-item">
-                        <a class="menu__list-link" href="#">FAQ</a>
+                        <a class="menu__list-link" href="#faq">FAQ</a>
                       </li>
                     </ul>
                     <button class="button header__btn">Teх. підтримка</button>
@@ -185,7 +184,11 @@
             задач.
           </p>
 
-          <button class="hero__btn button" data-bs-toggle="modal" data-bs-target="#modal-payment">Придбати VDS</button>
+          <button class="hero__btn button d-flex justify-content-between align-items-center mx-auto"
+            data-bs-toggle="modal" data-bs-target="#modal-payment">
+            <img src="img/hero/hero-btn-icon.svg" alt="Server" class="hero__btn-icon me-1">
+            <span class="hero__btn-text">Придбати VDS</span>
+          </button>
 
         </div>
       </div>
@@ -266,7 +269,7 @@
     <section class="about">
       <div class="_container">
         <div class="container-fluid">
-          <h2 class="title about__title">Про<span class="text-accent">нас</span></h2>
+          <h2 class="title about__title" id="about">Про <span class="text-accent">нас</span></h2>
           <div class="about__body">
             <p class="about__text"><span class="about__text-accent">VDS</span> - це віртуально створений ПК із
               потрібними
@@ -322,7 +325,7 @@
     <section class="tariffs">
       <div class="_container">
         <div class="container-fluid">
-          <div class="tariffs__body">
+          <div class="tariffs__body" id="buy">
             <h2 class="title tariffs__title">Вартість та оплата</h2>
             <div class="tariffs__cards">
               <div class="row justify-content-center justify-content-xl-between">
@@ -358,7 +361,10 @@
                       <span class="card-tariff__info-price">400грн</span>
                     </div>
 
-                    <button class="card-tariff__button button">Замовити</button>
+                    <button class="card-tariff__button button d-flex justify-content-between align-items-center">
+                      <img src="img/tariffs/icon-btn-card.svg" alt="Buy" class="card-tariff__button-icon me-1">
+                      Замовити
+                    </button>
                   </div>
                 </div>
 
@@ -394,7 +400,10 @@
                       <span class="card-tariff__info-price">770грн</span>
                     </div>
 
-                    <button class="card-tariff__button button">Замовити</button>
+                    <button class="card-tariff__button button d-flex justify-content-between align-items-center">
+                      <img src="img/tariffs/icon-btn-card.svg" alt="Buy" class="card-tariff__button-icon me-1">
+                      Замовити
+                    </button>
                   </div>
                 </div>
 
@@ -430,7 +439,10 @@
                       <span class="card-tariff__info-price">2700грн</span>
                     </div>
 
-                    <button class="card-tariff__button button">Замовити</button>
+                    <button class="card-tariff__button button d-flex justify-content-between align-items-center">
+                      <img src="img/tariffs/icon-btn-card.svg" alt="Buy" class="card-tariff__button-icon me-1">
+                      Замовити
+                    </button>
                   </div>
                 </div>
               </div>
@@ -443,7 +455,7 @@
     <section class="steps">
       <div class="_container">
         <div class="step-info">
-          <h4 class="step-info__title title">Як мені вибрати сервер?</h4>
+          <h4 class="step-info__title title" id="faq">Як мені вибрати сервер?</h4>
           <div class="step-info__text">
             <p class="step-info__text-inner">Зареєструватися на сайті та оплатити віртуальний комп'ютер.оплатить
               виртуальный компьютер.</p>
@@ -522,8 +534,12 @@
       <div class="_container">
         <div class="questions__body">
           <h2 class="questions__title title">Залишились запитання?</h2>
-          <span class="questions__text">Напишіть нам на E-mail та ми з радістю відповідмо на всі ваші запитання<span>
-              <button class="questions__button button">Написати</button>
+          <span class="questions__text">Напишіть нам на E-mail та ми з радістю відповідмо на всі ваші
+            запитання</span>
+          <button class="questions__button button d-flex justify-content-center align-items-center">
+            <img src="img/questions/icon-mail.svg" alt="Email" class="questions__button-icon me-1">
+            Написати
+          </button>
         </div>
       </div>
     </section>

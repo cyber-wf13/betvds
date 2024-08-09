@@ -1,17 +1,17 @@
-.questions{
-  background-color: #F0F0F0;
+.questions {
+  background-color: #f0f0f0;
   padding: 20px 0;
-  &__body{
+  &__body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
   }
-  &__title{
+  &__title {
     color: $c-text-accent;
     @include adaptiv-value(font-size, 40, 20, 1);
   }
-  &__text{
+  &__text {
     font-weight: 500;
     color: $c-text-grey;
     padding: 20px 0 30px;
@@ -20,24 +20,11 @@
     @include adaptiv-value(padding-top, 20, 10, 1);
     @include adaptiv-value(padding-bottom, 30, 20, 1);
   }
-  &__button{
-    position: relative;
+  &__button {
     height: 50px;
     color: #fff;
-    padding: 10px 0 10px 40px;
+    padding: 10px 15px;
     border-radius: 5px;
     @include adaptiv-value(font-size, 26, 20, 1);
-    &::before{
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 15px;
-      transform: translateY(-50%);
-      height: 26px;
-      width: 30px;
-      background-image: url(../img/questions/icon-mail.svg);
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
   }
 }

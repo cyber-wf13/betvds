@@ -1,14 +1,14 @@
-.card-tariff{
+.card-tariff {
   padding: 30px 60px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  @media (max-width: 575.98px){
+  @media (max-width: 575.98px) {
     padding: 20px 30px;
   }
-  &__title{
+  &__title {
     display: inline-block;
     position: relative;
     text-transform: uppercase;
@@ -16,8 +16,8 @@
     font-weight: 700;
     @include adaptiv-value(font-size, 40, 25, 1);
     padding-left: 60px;
-    &::before{
-      content: '';
+    &::before {
+      content: "";
       position: absolute;
       top: 50%;
       left: 0;
@@ -29,58 +29,40 @@
       background-size: cover;
     }
   }
-  &__table{
-    border-top: 1px solid #E3E3E3;
-    border-bottom: 1px solid #E3E3E3;
+  &__table {
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
     margin: 20px 0 30px;
     color: $c-text-grey;
     width: 100%;
     border-spacing: 0 20px;
     @include adaptiv-value(font-size, 24, 12, 1);
-    @media (max-width: 575.98px){
+    @media (max-width: 575.98px) {
       margin: 20px 0;
     }
   }
-  &__table-value{
+  &__table-value {
     font-weight: 700;
     text-align: right;
   }
-  &__info{
+  &__info {
     margin-bottom: 20px;
     color: $c-text-accent;
     text-align: center;
     @include adaptiv-value(font-size, 24, 12, 1);
   }
-  &__info-price{
+  &__info-price {
     display: block;
     font-weight: 600;
     @include adaptiv-value(font-size, 36, 18, 1);
     margin: 0 auto;
   }
-  &__button{
-    position: relative;
+  &__button {
     color: #fff;
-    padding-left: 40px;
-    @include adaptiv-value(font-size, 26, 13, 1);
-    &::before{
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 20px;
-      transform: translateY(-50%);
-      height: 22px;
-      width: 25px;
-      background-image: url(../img/tariffs/icon-btn-card.svg);
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    @media (max-width: 575.98px){
+    padding: 10px 15px;
+    @include adaptiv-value(font-size, 26, 16, 1);
+    @media (max-width: 575.98px) {
       height: 40px;
-      width: 100%;
-      padding: 10px 0 10px;
-      &::before{
-        left: calc(100% - 80%);
-      }
     }
   }
 }
