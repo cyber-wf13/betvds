@@ -1,34 +1,35 @@
-.carousel-control-prev, .carousel-control-next {
+.carousel-control-prev,
+.carousel-control-next {
   display: block;
   opacity: 1;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.carousel-control-next{
+.carousel-control-next {
   transform: translateY(-50%) rotate(180deg);
 }
 
 .carousel-indicators {
   margin-bottom: 0;
-  
+
   [data-bs-target] {
     border-radius: 50%;
-    background-color: #C4C4C4;
+    background-color: #c4c4c4;
     height: 10px;
     width: 10px;
     opacity: 1;
   }
 
   [data-bs-target].active {
-    background-color: #262D36;
+    background-color: #262d36;
   }
 }
 
-.modal-footer{
+.modal-footer {
   justify-content: flex-start;
 }
 
-.modal-content{
+.modal-content {
   padding-top: 50px;
 }

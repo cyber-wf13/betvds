@@ -1,60 +1,60 @@
-.about{
-  background-color: #262D36;
+.about {
+  background-color: #262d36;
   background-image: url(../img/about/lines-bg.svg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 40px 0 95px;
-  @media (max-width: 767.98px){
+  @media (max-width: 767.98px) {
     padding: 20px 0 60px;
   }
-  &__title{
+  &__title {
     display: inline-block;
     color: #fff;
     text-align: left;
     padding-bottom: 10px;
-    &::before{
-      background-color: #765B41;
+    &::before {
+      background-color: #765b41;
     }
   }
-  &__body{
+  &__body {
     margin: 70px 0;
-    @media (max-width: 767.98px){
+    @media (max-width: 767.98px) {
       margin: 30px 0;
     }
   }
-  &__text{
-    &:not(&:last-child){
+  &__text {
+    &:not(&:last-child) {
       margin-bottom: 20px;
     }
   }
-  &__text-accent{
+  &__text-accent {
     font-weight: 700;
   }
-  &__sub-title{
+  &__sub-title {
     display: inline-block;
     text-align: left;
     color: $c-accent;
     font-size: 24px;
     padding-bottom: 10px;
     margin-bottom: 70px;
-    @media (max-width: 767.98px){
+    @media (max-width: 767.98px) {
       margin-bottom: 30px;
     }
-    &::before{
+    &::before {
       background-color: $c-accent;
     }
   }
-  &__item{
-    @media (max-width: 991.98px){
+  &__item {
+    @media (max-width: 991.98px) {
       margin: 10px 0;
     }
   }
-  &__item-img{
+  &__item-img {
     border: 2px solid $c-accent;
     border-radius: 50%;
     padding: 20px;
   }
-  &__item-text{
+  &__item-text {
     display: block;
     max-width: 250px;
     color: $c-accent;
