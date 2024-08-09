@@ -22,7 +22,7 @@
   <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <meta name="description" content="Basic template for a website">
+  <meta name="description" content="BetVDS - best virtual server">
   <meta name="keywords" content="">
 
   <link rel="stylesheet" href="css/libs.css">
@@ -32,16 +32,18 @@
 
 
 <body>
-  <div class="modal fade" id="modal-payment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="modal-payment" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog popup">
       <div class="modal-content">
         <button type="button" class="btn-close popup__close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="modal-body">
           <div class="popup__item">
-            <div class="popup__head popup-head">
-              <span class="popup-head__count">1</span>
-              <h4 class="popup-head__title">Виберіть спосіб оплати</h4>
-              <span class="popup-head__descr">Виберіть найбільш зручний для себе спосіб оплати</span>
+            <div class="popup__head popup-head d-flex  align-items-center">
+              <span class="popup-head__count d-flex justify-content-center align-items-center me-2 fw-bold">1</span>
+              <div class="popup-head__textblock">
+                <h4 class="popup-head__title fw-bold">Виберіть спосіб оплати</h4>
+                <span class="popup-head__descr">Виберіть найбільш зручний для себе спосіб оплати</span>
+              </div>
             </div>
             <div class="popup__content">
               <div id="popup-carousel" class="carousel slide popup-carousel">
@@ -72,35 +74,39 @@
             </div>
           </div>
           <div class="popup__item">
-            <div class="popup__head popup-head">
-              <span class="popup-head__count">2</span>
-              <h4 class="popup-head__title">Введіть свій коректний E-mail</h4>
-              <span class="popup-head__descr">На вашу почту прийдуть дані для підключення до VPS</span>
+            <div class="popup__head popup-head d-flex  align-items-center">
+              <span class="popup-head__count d-flex justify-content-center align-items-center me-2 fw-bold">2</span>
+              <div class="popup-head__textblock">
+                <h4 class="popup-head__title fw-bold">Введіть свій коректний E-mail</h4>
+                <span class="popup-head__descr">На вашу почту прийдуть дані для підключення до VPS</span>
+              </div>
             </div>
             <div class="popup__content">
               <input type="email" class="popup__input" placeholder="E-mail" required form="form-popup">
             </div>
           </div>
           <div class="popup__item">
-            <div class="popup__head popup-head">
-              <span class="popup-head__count">3</span>
-              <h4 class="popup-head__title">Додатково</h4>
-              <span class="popup-head__descr">Виберіть кількість та введіть промокод при наявності</span>
+            <div class="popup__head popup-head d-flex  align-items-center">
+              <span class="popup-head__count d-flex justify-content-center align-items-center me-2 fw-bold">3</span>
+              <div class="popup-head__textblock">
+                <h4 class="popup-head__title fw-bold">Додатково</h4>
+                <span class="popup-head__descr">Виберіть кількість та введіть промокод при наявності</span>
+              </div>
             </div>
             <div class="popup__content">
               <input type="number" class="popup__input" placeholder="Введіть кількість" form="form-popup" max="10"
-                min="0" step="1">
+                min="1" step="1">
               <input type="text" class="popup__input" placeholder="Промокод" form="form-popup">
             </div>
           </div>
         </div>
         <div class="modal-footer">
           <form action="#" class="popup__form" id="form-popup">
-            <a href="#" class="popup__policy">Політика безпеки</a>
+            <a href="#" class="popup__policy text-decoration-underline d-block">Політика безпеки</a>
             <button class="button popup__button">Перейти до оплати</button>
             <div class="popup__total">
               <p class="popup__total-text">Всього до сплати:
-                <span class="popup__total-count">2700</span> грн
+                <span class="popup__total-count fw-bold">2700</span> грн
               </p>
             </div>
           </form>
@@ -122,9 +128,10 @@
                 </div>
 
                 <div class="col-4 d-flex justify-content-end d-xl-none">
-                  <button class="navbar-toggler button button-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#burger-menu" aria-controls="burger-menu" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                  <button
+                    class="navbar-toggler button button-toggler d-flex justify-content-around align-items-center flex-column py-1 px-0"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#burger-menu" aria-controls="burger-menu"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <div class="button-toggler__arrow"></div>
                     <div class="button-toggler__arrow"></div>
                     <div class="button-toggler__arrow"></div>
@@ -133,7 +140,8 @@
 
                 <div class="col-12 col-xl-10">
                   <div class="collapse navbar-collapse justify-content-end" id="burger-menu">
-                    <ul class="menu__list">
+                    <ul
+                      class="menu__list d-flex justify-content-xl-end justify-content-sm-between justify-content-center align-items-center flex-column flex-sm-row py-2 py-sm-3">
                       <li class="menu__list-item">
                         <a class="menu__list-link" href="#buy">Придбати VDS</a>
                       </li>
@@ -153,9 +161,9 @@
         </div>
         </nav>
       </header>
-      <div class="hero__body">
+      <div class="hero__body d-flex flex-column justify-content-center align-items-center text-center">
         <div class="container-fluid">
-          <h2 class="hero__title text-uppercase">Кращий вибір</h2>
+          <h2 class="hero__title fw-bold text-uppercase">Кращий вибір</h2>
 
           <div class="row justify-content-around">
             <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
@@ -179,7 +187,7 @@
           </div>
 
           <p class="hero__text">
-            <span class="text-accent">VDS</span> - це віртуально створений ПК із потрібними вам конфігураціями.
+            <span class="text-warning">VDS</span> - це віртуально створений ПК із потрібними вам конфігураціями.
             Це відмінне рішення для повної анонімності та отримання необхідної потужності для вирішення різних
             задач.
           </p>
@@ -202,9 +210,10 @@
           <div class="advantage__wrapper">
             <h2 class="title advantage__title">Переваги</h2>
             <div class="advantage__body">
-              <div class="row row--top">
+              <div class="row">
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div class="advantage__card card-advantage">
+                  <div
+                    class="advantage__card card-advantage d-flex justify-content-between align-items-center flex-column text-center">
                     <img src="img/advantage/icon-rocket.svg" alt="" class="card-advantage__img">
                     <h4 class="card-advantage__title">Швидкість</h4>
                     <p class="card-advantage__text">Інтернет канал без обмежень</p>
@@ -212,7 +221,8 @@
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div class="advantage__card card-advantage">
+                  <div
+                    class="advantage__card card-advantage d-flex justify-content-between align-items-center flex-column text-center">
                     <img src="img/advantage/icon-gear.svg" alt="" class="card-advantage__img">
                     <h4 class="card-advantage__title">Софт</h4>
                     <p class="card-advantage__text">Попередньо встановлені популярні
@@ -221,7 +231,8 @@
                 </div>
 
                 <div class="col-12 col-lg-4">
-                  <div class="advantage__card card-advantage">
+                  <div
+                    class="advantage__card card-advantage d-flex justify-content-between align-items-center flex-column text-center">
                     <img src="img/advantage/icon-windows.svg" alt="" class="card-advantage__img">
                     <h4 class="card-advantage__title">Windows 10</h4>
                     <p class="card-advantage__text">На всіх рішенях встановлена Windows 10</p>
@@ -229,9 +240,10 @@
                 </div>
               </div>
 
-              <div class="row row--bottom">
+              <div class="row mt-3 mt-md-5">
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div class="advantage__card card-advantage">
+                  <div
+                    class="advantage__card card-advantage d-flex justify-content-between align-items-center flex-column text-center">
                     <img src="img/advantage/icon-circlefork.svg" alt="" class="card-advantage__img">
                     <h4 class="card-advantage__title">Оптимізація під вилки</h4>
                     <p class="card-advantage__text">Стабільна робота бота та
@@ -242,18 +254,20 @@
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div class="advantage__card card-advantage">
+                  <div
+                    class="advantage__card card-advantage d-flex justify-content-between align-items-center flex-column text-center">
                     <img src="img/advantage/icon-money-bag.svg" alt="" class="card-advantage__img">
                     <h4 class="card-advantage__title">Оптимальна ціна</h4>
                     <p class="card-advantage__text">
-                      <span class="card-advantage__text-accent">400грн - 7 днів</span>
+                      <span class="card-advantage__text d-block fw-bold">400грн - 7 днів</span>
                       Одна з найкращих пропозицій на ринку
                     </p>
                   </div>
                 </div>
 
                 <div class="col-12 col-lg-4">
-                  <div class="advantage__card card-advantage">
+                  <div
+                    class="advantage__card card-advantage d-flex justify-content-between align-items-center flex-column text-center">
                     <img src="img/advantage/icon-fingerprint.svg" alt="" class="card-advantage__img">
                     <h4 class="card-advantage__title">Унікалізація</h4>
                     <p class="card-advantage__text">Кожна віртуальна машина унікальна</p>
@@ -269,9 +283,9 @@
     <section class="about">
       <div class="_container">
         <div class="container-fluid">
-          <h2 class="title about__title" id="about">Про <span class="text-accent">нас</span></h2>
-          <div class="about__body">
-            <p class="about__text"><span class="about__text-accent">VDS</span> - це віртуально створений ПК із
+          <h2 class="title about__title text-start" id="about">Про <span class="text-warning fw-bold">нас</span></h2>
+          <div class="about__body d-flex justify-content-between flex-column">
+            <p class="about__text"><span class="about__text-warning">VDS</span> - це віртуально створений ПК із
               потрібними
               вам конфігураціями. Це відмінне рішення для повної анонімності та отримання необхідної потужності для
               розв'язання різних завдань
@@ -279,41 +293,41 @@
             <p class="about__text">
               Спочатку ми створювали VDS під свої особисті потреби (використання власного ПЗ), але побачивши дефіцит
               якісного сервісу
-              <span class="about__text-accent">VDS для професіоналів</span>, ми вирішили надати його широкій
+              <span class="text-warning fw-bold">VDS для професіоналів</span>, ми вирішили надати його широкій
               аудиторії.
             </p>
           </div>
           <div class="about__items">
-            <h4 class="about__sub-title title">Наші основні правила для всіх продуктів:</h4>
+            <h4 class="about__subtitle title text-start ">Наші основні правила для всіх продуктів:</h4>
             <div class="row justify-content-between">
               <div class="col-md-4 col-lg-3">
-                <div class="about__item">
+                <div class="about__item d-flex flex-column justify-content-between align-items-center my-2 my-lg-0">
                   <img src="img/about/icon-1.svg" alt="" class="about__item-img mx-auto">
-                  <span class="about__item-text">Оперативна підтримка</span>
+                  <span class="about__item-text text-center fw-bold">Оперативна підтримка</span>
                 </div>
               </div>
               <div class="col-md-4 col-lg-2">
-                <div class="about__item">
+                <div class="about__item d-flex flex-column justify-content-between align-items-center my-2 my-lg-0">
                   <img src="img/about/icon-2.svg" alt="" class="about__item-img mx-auto">
-                  <span class="about__item-text">Досвідчені розробники</span>
+                  <span class="about__item-text text-center fw-bold">Досвідчені розробники</span>
                 </div>
               </div>
               <div class="col-md-4 col-lg-2">
-                <div class="about__item">
+                <div class="about__item d-flex flex-column justify-content-between align-items-center my-2 my-lg-0">
                   <img src="img/about/icon-3.svg" alt="" class="about__item-img mx-auto">
-                  <span class="about__item-text">Можливості та співробніцтво</span>
+                  <span class="about__item-text text-center fw-bold">Можливості та співробніцтво</span>
                 </div>
               </div>
               <div class="col-md-6 col-lg-2">
-                <div class="about__item">
+                <div class="about__item d-flex flex-column justify-content-between align-items-center my-2 my-lg-0">
                   <img src="img/about/icon-4.svg" alt="" class="about__item-img mx-auto">
-                  <span class="about__item-text">Гнучка цінова політика</span>
+                  <span class="about__item-text text-center fw-bold">Гнучка цінова політика</span>
                 </div>
               </div>
               <div class="col-md-6 col-lg-3">
-                <div class="about__item">
+                <div class="about__item d-flex flex-column justify-content-between align-items-center my-2 my-lg-0">
                   <img src="img/about/icon-5.svg" alt="" class="about__item-img mx-auto">
-                  <span class="about__item-text">Безпека та анонімність</span>
+                  <span class="about__item-text text-center fw-bold">Безпека та анонімність</span>
                 </div>
               </div>
             </div>
@@ -330,113 +344,40 @@
             <div class="tariffs__cards">
               <div class="row justify-content-center justify-content-xl-between">
                 <div class="col-md-6 col-xl-4">
-                  <div class="tariffs__card card-tariff">
-                    <h6 class="card-tariff__title">VDS</h6>
+                  <div class="tariffs__card card-tariff d-flex justify-content-between align-items-center flex-column">
+                    <h6
+                      class="card-tariff__title d-flex justify-content-between align-items-center text-uppercase fw-bold">
+                      <img src="img/tariffs/icon-card.svg" alt="BetVDS" class="card-tariff__title-icon me-1">
+                      VDS
+                    </h6>
 
                     <table class="card-tariff__table">
                       <tr class="card-tariff__table-row">
                         <td class="card-tariff__table-cell card-tariff__table-info">RAM</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">8 GB</td>
+                        <td class="card-tariff__table-cell card-tariff__table-value fw-bold text-end">8 GB</td>
                       </tr>
                       <tr class="card-tariff__table-row">
                         <td class="card-tariff__table-cell card-tariff__table-info">SSD Space</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">30 GB</td>
+                        <td class="card-tariff__table-cell card-tariff__table-value fw-bold text-end">30 GB</td>
                       </tr>
                       <tr class="card-tariff__table-row">
                         <td class="card-tariff__table-cell card-tariff__table-info">CPU Cores</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">2</td>
+                        <td class="card-tariff__table-cell card-tariff__table-value fw-bold text-end">2</td>
                       </tr>
                       <tr class="card-tariff__table-row">
                         <td class="card-tariff__table-cell card-tariff__table-info">Bandwidth</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">1 TB</td>
+                        <td class="card-tariff__table-cell card-tariff__table-value fw-bold text-end">1 TB</td>
                       </tr>
                       <tr class="card-tariff__table-row">
                         <td class="card-tariff__table-cell card-tariff__table-info">Control Panel</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">Full</td>
+                        <td class="card-tariff__table-cell card-tariff__table-value fw-bold text-end">Full</td>
                       </tr>
                     </table>
 
-                    <div class="card-tariff__info">
+                    <div
+                      class="card-tariff__info text-center d-flex flex-column justify-content-between align-items-center">
                       <span class="card-tariff__info-date">7 днів</span>
-                      <span class="card-tariff__info-price">400грн</span>
-                    </div>
-
-                    <button class="card-tariff__button button d-flex justify-content-between align-items-center">
-                      <img src="img/tariffs/icon-btn-card.svg" alt="Buy" class="card-tariff__button-icon me-1">
-                      Замовити
-                    </button>
-                  </div>
-                </div>
-
-                <div class="col-md-6 col-xl-4">
-                  <div class="tariffs__card card-tariff">
-                    <h6 class="card-tariff__title">VDS</h6>
-
-                    <table class="card-tariff__table">
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">RAM</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">8 GB</td>
-                      </tr>
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">SSD Space</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">30 GB</td>
-                      </tr>
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">CPU Cores</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">2</td>
-                      </tr>
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">Bandwidth</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">1 TB</td>
-                      </tr>
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">Control Panel</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">Full</td>
-                      </tr>
-                    </table>
-
-                    <div class="card-tariff__info">
-                      <span class="card-tariff__info-date">14 днів</span>
-                      <span class="card-tariff__info-price">770грн</span>
-                    </div>
-
-                    <button class="card-tariff__button button d-flex justify-content-between align-items-center">
-                      <img src="img/tariffs/icon-btn-card.svg" alt="Buy" class="card-tariff__button-icon me-1">
-                      Замовити
-                    </button>
-                  </div>
-                </div>
-
-                <div class="col-md-6 col-xl-4">
-                  <div class="tariffs__card card-tariff">
-                    <h6 class="card-tariff__title">VDS</h6>
-
-                    <table class="card-tariff__table">
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">RAM</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">8 GB</td>
-                      </tr>
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">SSD Space</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">30 GB</td>
-                      </tr>
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">CPU Cores</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">2</td>
-                      </tr>
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">Bandwidth</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">1 TB</td>
-                      </tr>
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">Control Panel</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">Full</td>
-                      </tr>
-                    </table>
-
-                    <div class="card-tariff__info">
-                      <span class="card-tariff__info-date">30 днів</span>
-                      <span class="card-tariff__info-price">2700грн</span>
+                      <span class="card-tariff__info-price d-blo fw-bold">400грн</span>
                     </div>
 
                     <button class="card-tariff__button button d-flex justify-content-between align-items-center">
@@ -466,43 +407,43 @@
             <div class="container-fluid">
               <div class="row flex-column flex-xl-row">
                 <div class="col-12 col-md-10 col-xl-12">
-                  <div class="step-info__item step-info__item--1">
-                    <div class="step-info__item-count">1</div>
+                  <div class="step-info__item step-info__item--1 d-flex">
+                    <div class="step-info__item-count d-flex justify-content-center align-items-center">1</div>
                     <span class="step-info__item-text">На власному комп'ютері натиснути кнопку Пуск</span>
                   </div>
                 </div>
 
                 <div class="col-12 col-md-10 col-xl-12 align-self-md-end align-self-xl-auto">
-                  <div class="step-info__item step-info__item--2">
-                    <div class="step-info__item-count">2</div>
+                  <div class="step-info__item step-info__item--2 d-flex">
+                    <div class="step-info__item-count d-flex justify-content-center align-items-center">2</div>
                     <span class="step-info__item-text">В рядку пошуку написати підключення</span>
                   </div>
                 </div>
 
                 <div class="col-12 col-md-10 col-xl-12">
-                  <div class="step-info__item step-info__item--3">
-                    <div class="step-info__item-count">3</div>
+                  <div class="step-info__item step-info__item--3 d-flex">
+                    <div class="step-info__item-count d-flex justify-content-center align-items-center">3</div>
                     <span class="step-info__item-text">Вибрати підключення до віддаленого робочого столу</span>
                   </div>
                 </div>
 
                 <div class="col-12 col-md-10 col-xl-12 align-self-md-end align-self-xl-auto">
-                  <div class="step-info__item step-info__item--4">
-                    <div class="step-info__item-count">4</div>
+                  <div class="step-info__item step-info__item--4 d-flex">
+                    <div class="step-info__item-count d-flex justify-content-center align-items-center">4</div>
                     <span class="step-info__item-text">Надрукувати айпі та порт разом</span>
                   </div>
                 </div>
 
                 <div class="col-12 col-md-10 col-xl-12">
-                  <div class="step-info__item step-info__item--5">
-                    <div class="step-info__item-count">5</div>
+                  <div class="step-info__item step-info__item--5 d-flex">
+                    <div class="step-info__item-count d-flex justify-content-center align-items-center">5</div>
                     <span class="step-info__item-text">Далі вибрати Administrator та пароль</span>
                   </div>
                 </div>
 
                 <div class="col-12 col-md-10 col-xl-12 align-self-md-end align-self-xl-auto">
-                  <div class="step-info__item step-info__item--6">
-                    <div class="step-info__item-count">6</div>
+                  <div class="step-info__item step-info__item--6 d-flex">
+                    <div class="step-info__item-count d-flex justify-content-center align-items-center">6</div>
                     <span class="step-info__item-text">Задати свій пароль</span>
                   </div>
                 </div>
@@ -515,15 +456,27 @@
         <div class="steps__body">
           <ol class="steps__list list-steps">
             <li class="list-steps__item">
-              <h6 class="list-steps__title list-steps__title--1">Який потрібен комп'ютер для роботи з віртуальними
-                машинами?</h6>
-              <p class="list-steps__text">Для віддаленого підключення до віртуальної машини підійде практично будь-яка
-                комп'ютер, головне щоб швидкість вашого Інтернету була від 5 мбіт/сек.</p>
+              <h6 class="list-steps__title list-steps__title--1">
+                <span class="list-steps__subtitle fw-bold me-1">1.1</span>
+                Який потрібен комп'ютер для роботи з віртуальними
+                машинами?
+              </h6>
+              <div class="list-steps__text-block d-flex flex-column justify-content-between">
+                <p class="list-steps__text">Для віддаленого підключення до віртуальної машини підійде практично будь-яка
+                  комп'ютер, головне щоб швидкість вашого Інтернету була від 5 мбіт/сек.</p>
+              </div>
             </li>
             <li class="list-steps__item">
-              <h6 class="list-steps__title list-steps__title--2">Навіщо використовувати ваші віртуальні машини?</h6>
-              <p class="list-steps__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci id,
-                unde perferendis accusamus cupiditate?</p>
+              <h6 class="list-steps__title list-steps__title--2">
+                <span class="list-steps__subtitle fw-bold me-1">1.2</span>
+                Навіщо використовувати ваші віртуальні машини?
+              </h6>
+              <div class="list-steps__text-block d-flex flex-column justify-content-between">
+                <p class="list-steps__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci
+                  id, unde perferendis accusamus cupiditate?</p>
+                <p class="list-steps__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci
+                  id, unde perferendis accusamus cupiditate?</p>
+              </div>
             </li>
           </ol>
         </div>
@@ -532,9 +485,9 @@
 
     <section class="questions">
       <div class="_container">
-        <div class="questions__body">
+        <div class="questions__body d-flex  justify-content-between align-items-center flex-column">
           <h2 class="questions__title title">Залишились запитання?</h2>
-          <span class="questions__text">Напишіть нам на E-mail та ми з радістю відповідмо на всі ваші
+          <span class="questions__text text-center">Напишіть нам на E-mail та ми з радістю відповідмо на всі ваші
             запитання</span>
           <button class="questions__button button d-flex justify-content-center align-items-center">
             <img src="img/questions/icon-mail.svg" alt="Email" class="questions__button-icon me-1">
@@ -545,9 +498,10 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer py-3 bg-warning">
     <div class="_container">
-      <div class="footer__body">
+      <div
+        class="footer__body d-flex justify-content-between align-items-center flex-column flex-sm-row align-items-sm-start">
         <a class="footer__logo" href="index.html">
           <img src="img/logo.svg" alt="BetVDS">
         </a>

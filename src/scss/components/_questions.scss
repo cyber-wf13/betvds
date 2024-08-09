@@ -1,12 +1,6 @@
 .questions {
   background-color: #f0f0f0;
   padding: 20px 0;
-  &__body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
   &__title {
     color: $c-text-accent;
     @include adaptiv-value(font-size, 40, 20, 1);
@@ -15,7 +9,6 @@
     font-weight: 500;
     color: $c-text-grey;
     padding: 20px 0 30px;
-    text-align: center;
     @include adaptiv-value(font-size, 24, 12, 1);
     @include adaptiv-value(padding-top, 20, 10, 1);
     @include adaptiv-value(padding-bottom, 30, 20, 1);

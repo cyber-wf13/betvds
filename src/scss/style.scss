@@ -2,11 +2,6 @@
 @import "helpers/mixins";
 @import "helpers/vars";
 
-//Переопределения переменных по умолчанию
-@import "vendors/vendors-extensions/bs-vars";
-//Переопределение свойство компонентов Bootstrap
-@import "vendors/vendors-extensions/bs-styles";
-
 // Объявление стилей для всего проекта
 @import "base/global";
 @import "base/reset";

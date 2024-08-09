@@ -3,19 +3,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   &__body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 170px 0 140px;
-    text-align: center;
     @media (max-width: 575.98px) {
       padding: 100px 0;
     }
   }
   &__title {
-    font-weight: 700;
-    text-transform: uppercase;
     @include adaptiv-value(font-size, 48, 30, 1);
     @include adaptiv-value(margin-bottom, 50, 35, 1);
   }

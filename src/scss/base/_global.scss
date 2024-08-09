@@ -4,7 +4,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	font-family: 'Montserrat';
+	font-family: "Montserrat";
 	font-weight: 400;
 	font-size: 24px;
 	color: #fff;
@@ -25,13 +25,13 @@ body {
 	flex: 0 0 auto;
 }
 
-._container{
-  max-width: $maxWidthContainer + px;
-  margin: 0 auto;
-  padding: 0 15px;
+._container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
 
-._visually-hidden{
+._visually-hidden {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -40,8 +40,4 @@ body {
 	padding: 0;
 	overflow: hidden;
 	clip: rect(0 0 0 0);
-}
-
-.text-accent{
-	color: $c-accent;
 }

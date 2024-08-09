@@ -1,45 +1,25 @@
-.list-steps{
+.list-steps {
   list-style: none;
-  &__item{
-  }
-  &__title{
+  &__title {
     position: relative;
     font-weight: 500;
     font-size: 24px;
     color: $c-text-accent;
     padding-left: 55px;
-    &::before{
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      font-weight: 600;
-    }
-    &--1::before{
-      content: '1.1.';
-    }
-    &--2::before{
-      content: '1.2.';
-    }
-    @media (max-width: 575.98px){
+    @media (max-width: 575.98px) {
       font-size: 20px;
       padding-left: 45px;
     }
   }
-  &__text{
+
+  &__text {
     font-weight: 500;
     font-size: 18px;
     color: $c-text-grey;
     padding: 15px 0 30px 80px;
-    & + & {
-      padding: 0 0 30px 80px;
-    }
-    @media (max-width: 575.98px){
+    @media (max-width: 575.98px) {
       font-size: 15px;
       padding: 10px 0 25px 45px;
-      & + & {
-        padding: 0 0 20px 45px;
-      }
     }
   }
 }
