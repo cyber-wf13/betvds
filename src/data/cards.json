@@ -1,0 +1,60 @@
+[
+  {
+    "name": "VDS-Test",
+    "descr": {
+      "ram": {
+        "title": "RAM",
+        "value": "4 GB"
+      },
+      "ssd": {
+        "title": "SSD",
+        "value": "30 GB"
+      },
+      "cpu": {
+        "title": "CPU Cores",
+        "value": "2"
+      },
+      "bandwidth": {
+        "title": "Bandwidth",
+        "value": "1 TB"
+      },
+      "panel": {
+        "title": "Control Panel",
+        "value": "full"
+      }
+    },
+    "price-info": {
+      "price": "0",
+      "days": "3"
+    }
+  },
+  {
+    "name": "VDS-Test",
+    "descr": {
+      "ram": {
+        "title": "RAM",
+        "value": "4"
+      },
+      "ssd": {
+        "title": "SSD",
+        "value": "30"
+      },
+      "cpu": {
+        "title": "CPU Cores",
+        "value": "2"
+      },
+      "bandwidth": {
+        "title": "Bandwidth",
+        "value": "1TB"
+      },
+      "panel": {
+        "title": "",
+        "value": "full"
+      }
+    },
+    "price-info": {
+      "price": "0",
+      "days": "3"
+    }
+  }
+]

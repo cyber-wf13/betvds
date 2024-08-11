@@ -6,7 +6,7 @@
   }
   &__title {
     color: $c-text-accent;
-    @include adaptiv-value(font-size, 40, 25, 1);
+    @include adaptiv-value(font-size, 35, 25, 1);
   }
   &__table {
     border-top: 1px solid #e3e3e3;
