@@ -34,7 +34,7 @@
 <body>
   <div class="modal fade" id="modal-payment" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog popup">
-      <div class="modal-content">
+      <form class="modal-content" id="form-popup" action="#">
         <button type="button" class="btn-close popup__close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="modal-body">
           <div class="popup__item">
@@ -101,17 +101,20 @@
           </div>
         </div>
         <div class="modal-footer">
-          <form action="#" class="popup__form" id="form-popup">
-            <a href="#" class="popup__policy text-decoration-underline d-block">Політика безпеки</a>
-            <button class="button popup__button">Перейти до оплати</button>
+          <div class="popup__buttons">
+            <div class="popup__order-info ">
+              <h4 class="popup__order-title fw-bold mb-1">Вибраний тариф</h4>
+              <span class="popup__order-name text-decoration-underline d-block mb-2"></span>
+            </div>
+            <button class="button popup__button" type="submit">Перейти до оплати</button>
             <div class="popup__total">
               <p class="popup__total-text">Всього до сплати:
-                <span class="popup__total-count fw-bold">2700</span> грн
+                <span class="popup__total-count fw-bold"></span>
               </p>
             </div>
-          </form>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
   </div>
   <section class="hero">

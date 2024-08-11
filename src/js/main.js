@@ -104,6 +104,12 @@ function createCard(cardInfo, orderEventCb) {
   return cardWrap;
 }
 
+function createOrder(event, orderName, price) {
+  const modal = document.querySelector("#modal-payment");
+  modal.querySelector(".popup__order-name").textContent = orderName;
+  modal.querySelector(".popup__total-count").textContent = `${price} грн`;
+}
+
 async function getInfoByServer(url, options = {}) {
   const response = await fetch(url, options);
   return await response.json();
@@ -114,8 +120,8 @@ const cardsInfo = await getInfoByServer("data/cards.json");
 
 cardsInfo.forEach((card) => {
   formCardsWrap.append(
-    createCard(card, (e) => {
-      console.log(e);
-    }),
+    createCard(card, (e) =>
+      createOrder(e, card["name"], card["price-info"]["price"]),
+    ),
   );
 });

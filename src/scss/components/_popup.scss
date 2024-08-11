@@ -48,7 +48,7 @@
       height: 30px;
     }
   }
-  &__form {
+  &__buttons {
     padding-left: 80px;
     @media (max-width: 767.98px) {
       padding-left: 60px;
@@ -57,10 +57,13 @@
       padding-left: 0;
     }
   }
-  &__policy {
-    font-size: 14px;
-    color: #195eb8;
-    margin-bottom: 15px;
+  &__order-info {
+    font-size: 18px;
+    color: $c-accent;
+  }
+  &__order-title {
+    @include adaptiv-value(font-size, 24, 14, 1);
+    color: $c-text-grey;
   }
   &__button {
     @include adaptiv-value(font-size, 19, 14, 1);

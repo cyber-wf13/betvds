@@ -29,15 +29,15 @@
     }
   },
   {
-    "name": "VDS-Test",
+    "name": "VDS-Light",
     "descr": {
       "ram": {
         "title": "RAM",
-        "value": "4"
+        "value": "4 GB"
       },
       "ssd": {
         "title": "SSD",
-        "value": "30"
+        "value": "30 GB"
       },
       "cpu": {
         "title": "CPU Cores",
@@ -45,16 +45,103 @@
       },
       "bandwidth": {
         "title": "Bandwidth",
-        "value": "1TB"
+        "value": "1 TB"
       },
       "panel": {
-        "title": "",
+        "title": "Control Panel",
         "value": "full"
       }
     },
     "price-info": {
-      "price": "0",
-      "days": "3"
+      "price": "700",
+      "days": "7"
+    }
+  },
+  {
+    "name": "VDS-Medium",
+    "descr": {
+      "ram": {
+        "title": "RAM",
+        "value": "4 GB"
+      },
+      "ssd": {
+        "title": "SSD",
+        "value": "30 GB"
+      },
+      "cpu": {
+        "title": "CPU Cores",
+        "value": "2"
+      },
+      "bandwidth": {
+        "title": "Bandwidth",
+        "value": "1 TB"
+      },
+      "panel": {
+        "title": "Control Panel",
+        "value": "full"
+      }
+    },
+    "price-info": {
+      "price": "1200",
+      "days": "14"
+    }
+  },
+  {
+    "name": "VDS-Pro",
+    "descr": {
+      "ram": {
+        "title": "RAM",
+        "value": "4 GB"
+      },
+      "ssd": {
+        "title": "SSD",
+        "value": "30 GB"
+      },
+      "cpu": {
+        "title": "CPU Cores",
+        "value": "2"
+      },
+      "bandwidth": {
+        "title": "Bandwidth",
+        "value": "1 TB"
+      },
+      "panel": {
+        "title": "Control Panel",
+        "value": "full"
+      }
+    },
+    "price-info": {
+      "price": "1600",
+      "days": "30"
+    }
+  },
+  {
+    "name": "VDS-Pro+",
+    "descr": {
+      "ram": {
+        "title": "RAM",
+        "value": "4 GB"
+      },
+      "ssd": {
+        "title": "SSD",
+        "value": "30 GB"
+      },
+      "cpu": {
+        "title": "CPU Cores",
+        "value": "2"
+      },
+      "bandwidth": {
+        "title": "Bandwidth",
+        "value": "1 TB"
+      },
+      "panel": {
+        "title": "Control Panel",
+        "value": "full"
+      }
+    },
+    "price-info": {
+      "price": "2100",
+      "days": "30"
     }
   }
 ]
