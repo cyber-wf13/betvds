@@ -106,8 +106,8 @@ function createCard(cardInfo, orderEventCb) {
 
 function createOrder(event, orderName, price) {
   const modal = document.querySelector("#modal-payment");
-  modal.querySelector(".popup__order-name").textContent = orderName;
   modal.querySelector(".popup__total-count").textContent = `${price} грн`;
+  modal.querySelector("#order-name").value = orderName;
 }
 
 async function getInfoByServer(url, options = {}) {
@@ -124,4 +124,66 @@ cardsInfo.forEach((card) => {
       createOrder(e, card["name"], card["price-info"]["price"]),
     ),
   );
+});
+
+const carousel = document.querySelector("#popup-carousel");
+carousel.addEventListener("slid.bs.carousel", (e) => {
+  const carousel = e.target;
+  const activeRadio = carousel.querySelector(".active>input");
+  activeRadio.checked = true;
+});
+
+function validateEmail(input) {
+  const emailRegExp =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  const constraint = new RegExp(emailRegExp);
+  if (constraint.test(input.value)) {
+    return true;
+  }
+  return false;
+}
+
+function validateMinMaxRange(input, min = 0, max = 5) {
+  const range = {
+    "min": min,
+    "max": max,
+  };
+  if (input.hasAttribute("min") && input.hasAttribute("max")) {
+    range.min = Number(input.getAttribute("min"));
+    range.max = Number(input.getAttribute("max"));
+  }
+
+  if (input.value <= range.max && input.value >= range.min) {
+    return true;
+  }
+
+  return false;
+}
+
+function validateRequired(input) {
+  if (input.value) {
+    return true;
+  }
+
+  return false;
+}
+
+const form = document.querySelector("#form-popup");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const email = form.querySelector("#order-email");
+  const count = form.querySelector("#order-count");
+  const promo = form.querySelector("#order-promo");
+
+  if (
+    validateEmail(email) &&
+    validateRequired(email) &&
+    validateMinMaxRange(count) &&
+    validateRequired(count) &&
+    validateRequired(promo)
+  ) {
+    form.submit();
+  }
 });

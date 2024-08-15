@@ -32,9 +32,9 @@
 
 
 <body>
-  <div class="modal fade" id="modal-payment" tabindex="-1" aria-hidden="true">
+  <div class="modal fade " id="modal-payment" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog popup">
-      <form class="modal-content" id="form-popup" action="#">
+      <form class="modal-content" id="form-popup">
         <button type="button" class="btn-close popup__close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="modal-body">
           <div class="popup__item">
@@ -48,22 +48,26 @@
             <div class="popup__content">
               <div id="popup-carousel" class="carousel slide popup-carousel">
                 <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#popup-carousel" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#popup-carousel" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#popup-carousel" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+                  <label data-bs-target="#popup-carousel" data-bs-slide-to="0" class="active " aria-current="true"
+                    aria-label="Slide 1">
+                    <input type="radio" name="payment" value="visa" checked />
+                  </label>
+                  <label data-bs-target="#popup-carousel" data-bs-slide-to="1" aria-label="Slide 2">
+                    <input type="radio" name="payment" value="mastercard" />
+                  </label>
+                  <label data-bs-target="#popup-carousel" data-bs-slide-to="2" aria-label="Slide 3">
+                    <input type="radio" name="payment" value="paypal" />
+                  </label>
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="img/popup/logo-visa.svg" alt="qiwi" class="popup-carousel__img mx-auto">
+                    <img src="img/popup/logo-visa.svg" alt="visa" class="popup-carousel__img mx-auto">
                   </div>
                   <div class="carousel-item">
-                    <img src="img/popup/logo-qiwi.svg" alt="qiwi" class="popup-carousel__img mx-auto">
+                    <img src="img/popup/logo-mastercard.svg" alt="mastercard" class="popup-carousel__img mx-auto">
                   </div>
                   <div class="carousel-item">
-                    <img src="img/popup/logo-yandex.svg" alt="qiwi" class="popup-carousel__img mx-auto">
+                    <img src="img/popup/logo-paypal.svg" alt="paypal" class="popup-carousel__img mx-auto">
                   </div>
                 </div>
                 <button class="carousel-control-prev popup-carousel__controls popup-carousel__prev" type="button"
@@ -82,7 +86,9 @@
               </div>
             </div>
             <div class="popup__content">
-              <input type="email" class="popup__input" placeholder="E-mail" required form="form-popup">
+              <input type="email" class="popup__input mt-2" placeholder="E-mail" form="form-popup" name="email"
+                id="order-email">
+              <!-- required  -->
             </div>
           </div>
           <div class="popup__item">
@@ -94,9 +100,10 @@
               </div>
             </div>
             <div class="popup__content">
-              <input type="number" class="popup__input" placeholder="Введіть кількість" form="form-popup" max="10"
-                min="1" step="1">
-              <input type="text" class="popup__input" placeholder="Промокод" form="form-popup">
+              <input type="number" class="popup__input mt-2" placeholder="Введіть кількість" form="form-popup" max="10"
+                min="1" step="1" name="count" id="order-count">
+              <input type="text" class="popup__input mt-2" placeholder="Промокод" form="form-popup" name="promo"
+                id="order-promo">
             </div>
           </div>
         </div>
@@ -104,7 +111,8 @@
           <div class="popup__buttons">
             <div class="popup__order-info ">
               <h4 class="popup__order-title fw-bold mb-1">Вибраний тариф</h4>
-              <span class="popup__order-name text-decoration-underline d-block mb-2"></span>
+              <input type="text" class="popup__order-name text-decoration-underline mb-2" id="order-name"
+                form="form-popup" name="tariff" readonly>
             </div>
             <button class="button popup__button" type="submit">Перейти до оплати</button>
             <div class="popup__total">
