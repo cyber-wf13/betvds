@@ -1,17 +1,1 @@
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d)">
-<path d="M21.5664 20L29.6664 11.9C29.8485 11.6874 29.9436 11.414 29.9328 11.1344C29.922 10.8547 29.806 10.5895 29.6082 10.3916C29.4103 10.1937 29.145 10.0778 28.8654 10.067C28.5857 10.0562 28.3123 10.1513 28.0998 10.3333L19.9998 18.4333L11.8998 10.3222C11.6872 10.1402 11.4138 10.0451 11.1341 10.0559C10.8545 10.0667 10.5892 10.1826 10.3914 10.3805C10.1935 10.5784 10.0775 10.8436 10.0667 11.1233C10.0559 11.4029 10.1511 11.6763 10.3331 11.8889L18.4331 20L10.322 28.1C10.2057 28.1996 10.1112 28.3222 10.0445 28.46C9.97781 28.5979 9.94033 28.748 9.93442 28.9011C9.92851 29.0541 9.9543 29.2067 10.0102 29.3492C10.066 29.4918 10.1507 29.6213 10.259 29.7296C10.3673 29.8379 10.4968 29.9226 10.6394 29.9785C10.782 30.0343 10.9346 30.0601 11.0876 30.0542C11.2406 30.0483 11.3908 30.0108 11.5286 29.9441C11.6665 29.8774 11.789 29.783 11.8886 29.6667L19.9998 21.5667L28.0998 29.6667C28.3123 29.8487 28.5857 29.9438 28.8654 29.933C29.145 29.9222 29.4103 29.8063 29.6082 29.6084C29.806 29.4105 29.922 29.1453 29.9328 28.8656C29.9436 28.586 29.8485 28.3126 29.6664 28.1L21.5664 20Z" fill="#B10000"/>
-</g>
-<defs>
-<filter id="filter0_d" x="5.93359" y="10.055" width="28" height="28" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="2"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-</filter>
-</defs>
-</svg>
+<svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_d)"><path d="M21.566 20l8.1-8.1a1.11 1.11 0 00-1.566-1.567l-8.1 8.1-8.1-8.11a1.111 1.111 0 00-1.567 1.566l8.1 8.111-8.111 8.1a1.112 1.112 0 101.567 1.567l8.11-8.1 8.1 8.1a1.111 1.111 0 001.567-1.567l-8.1-8.1z" fill="#B10000"/></g><defs><filter id="filter0_d" x="5.934" y="10.055" width="28" height="28" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="4"/><feGaussianBlur stdDeviation="2"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/><feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/></filter></defs></svg>

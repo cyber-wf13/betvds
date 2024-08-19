@@ -26,7 +26,6 @@
     }
   }
   &__btn {
-    margin: 0 auto;
     height: 70px;
     width: max-content;
     color: #fff;
@@ -39,7 +38,8 @@
       }
     }
     @media (max-width: 575.98px) {
-      font-size: 25px;
+      font-size: 23px;
+      width: 250px;
     }
   }
 }

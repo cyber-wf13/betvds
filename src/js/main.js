@@ -133,13 +133,39 @@ carousel.addEventListener("slid.bs.carousel", (e) => {
   activeRadio.checked = true;
 });
 
+function createFormErrorElement(parentItem, message, deleteItem = false) {
+  let el = parentItem.nextElementSibling;
+
+  if (el !== null && el.classList.contains("invalid-feedback")) {
+    return;
+  } else {
+    el = createElement("div", ["invalid-feedback"]);
+    el.textContent = message;
+    parentItem.after(el);
+  }
+}
+
+function removeFromErrorElement(parentItem) {
+  const el = parentItem.nextElementSibling;
+
+  if (el !== null && el.classList.contains("invalid-feedback")) {
+    el.remove();
+    console.log("remove item");
+  }
+}
+
 function validateEmail(input) {
   const emailRegExp =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   const constraint = new RegExp(emailRegExp);
   if (constraint.test(input.value)) {
+    removeFromErrorElement(input);
     return true;
   }
+  createFormErrorElement(
+    input,
+    "Дане поле повинно містити email, у відповідному форматі.Напр. test123@email.com",
+  );
   return false;
 }
 
@@ -154,17 +180,14 @@ function validateMinMaxRange(input, min = 0, max = 5) {
   }
 
   if (input.value <= range.max && input.value >= range.min) {
+    removeFromErrorElement(input);
     return true;
   }
 
-  return false;
-}
-
-function validateRequired(input) {
-  if (input.value) {
-    return true;
-  }
-
+  createFormErrorElement(
+    input,
+    `Введене значення повинно бути в межах ${range.min} - ${range.max}`,
+  );
   return false;
 }
 
@@ -175,15 +198,10 @@ form.addEventListener("submit", (e) => {
   const form = e.target;
   const email = form.querySelector("#order-email");
   const count = form.querySelector("#order-count");
-  const promo = form.querySelector("#order-promo");
 
-  if (
-    validateEmail(email) &&
-    validateRequired(email) &&
-    validateMinMaxRange(count) &&
-    validateRequired(count) &&
-    validateRequired(promo)
-  ) {
+  if (validateEmail(email) && validateMinMaxRange(count)) {
     form.submit();
+  } else {
+    form.classList.add("was-validated");
   }
 });

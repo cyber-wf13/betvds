@@ -22,47 +22,52 @@
   <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <meta name="description" content="Basic template for a website">
+  <meta name="description" content="BetVDS - best virtual server">
   <meta name="keywords" content="">
 
-  <link rel="stylesheet" href="css/libs_style.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/libs.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>BetVDS</title>
 </head>
 
 
 <body>
-  <div class="modal fade" id="modal-payment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade " id="modal-payment" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog popup">
-      <div class="modal-content">
+      <form class="modal-content " id="form-popup" novalidate>
         <button type="button" class="btn-close popup__close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="modal-body">
           <div class="popup__item">
-            <div class="popup__head popup-head">
-              <span class="popup-head__count">1</span>
-              <h4 class="popup-head__title">Выберите способ оплаты</h4>
-              <span class="popup-head__descr">Выберите для себя наиболее удобный способ</span>
+            <div class="popup__head popup-head d-flex  align-items-center">
+              <span class="popup-head__count d-flex justify-content-center align-items-center me-2 fw-bold">1</span>
+              <div class="popup-head__textblock">
+                <h4 class="popup-head__title fw-bold">Виберіть спосіб оплати</h4>
+                <span class="popup-head__descr">Виберіть найбільш зручний для себе спосіб оплати</span>
+              </div>
             </div>
             <div class="popup__content">
-              <div id="popup-carousel" class="carousel slide popup-carousel" data-bs-ride="carousel"
-                data-bs-interval="false">
+              <div id="popup-carousel" class="carousel slide popup-carousel">
                 <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#popup-carousel" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#popup-carousel" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#popup-carousel" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+                  <label data-bs-target="#popup-carousel" data-bs-slide-to="0" class="active " aria-current="true"
+                    aria-label="Slide 1">
+                    <input type="radio" name="payment" value="visa" checked />
+                  </label>
+                  <label data-bs-target="#popup-carousel" data-bs-slide-to="1" aria-label="Slide 2">
+                    <input type="radio" name="payment" value="mastercard" />
+                  </label>
+                  <label data-bs-target="#popup-carousel" data-bs-slide-to="2" aria-label="Slide 3">
+                    <input type="radio" name="payment" value="paypal" />
+                  </label>
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="img/popup/logo-visa.svg" alt="qiwi" class="popup-carousel__img mx-auto">
+                    <img src="img/popup/logo-visa.svg" alt="visa" class="popup-carousel__img mx-auto">
                   </div>
                   <div class="carousel-item">
-                    <img src="img/popup/logo-qiwi.svg" alt="qiwi" class="popup-carousel__img mx-auto">
+                    <img src="img/popup/logo-mastercard.svg" alt="mastercard" class="popup-carousel__img mx-auto">
                   </div>
                   <div class="carousel-item">
-                    <img src="img/popup/logo-yandex.svg" alt="qiwi" class="popup-carousel__img mx-auto">
+                    <img src="img/popup/logo-paypal.svg" alt="paypal" class="popup-carousel__img mx-auto">
                   </div>
                 </div>
                 <button class="carousel-control-prev popup-carousel__controls popup-carousel__prev" type="button"
@@ -73,41 +78,50 @@
             </div>
           </div>
           <div class="popup__item">
-            <div class="popup__head popup-head">
-              <span class="popup-head__count">2</span>
-              <h4 class="popup-head__title">Введите свой корректный E-mail</h4>
-              <span class="popup-head__descr">На Вашу почту придут данные для подключения к VPS</span>
+            <div class="popup__head popup-head d-flex  align-items-center">
+              <span class="popup-head__count d-flex justify-content-center align-items-center me-2 fw-bold">2</span>
+              <div class="popup-head__textblock">
+                <h4 class="popup-head__title fw-bold">Введіть свій коректний E-mail</h4>
+                <span class="popup-head__descr">На вашу почту прийдуть дані для підключення до VPS</span>
+              </div>
             </div>
             <div class="popup__content">
-              <input type="email" class="popup__input"
-                placeholder="E-mail (на него придут данные для подключения к VPS)" required form="form-popup">
+              <input type="email" class="popup__input mt-2" placeholder="E-mail" form="form-popup" name="email"
+                id="order-email" required>
             </div>
           </div>
           <div class="popup__item">
-            <div class="popup__head popup-head">
-              <span class="popup-head__count">3</span>
-              <h4 class="popup-head__title">Дополнительно</h4>
-              <span class="popup-head__descr">Выберите количество и введите промокод, если он есть</span>
+            <div class="popup__head popup-head d-flex  align-items-center">
+              <span class="popup-head__count d-flex justify-content-center align-items-center me-2 fw-bold">3</span>
+              <div class="popup-head__textblock">
+                <h4 class="popup-head__title fw-bold">Додатково</h4>
+                <span class="popup-head__descr">Виберіть кількість та введіть промокод при наявності</span>
+              </div>
             </div>
             <div class="popup__content">
-              <input type="number" class="popup__input" placeholder="Введите приобретаемое количество" form="form-popup"
-                max="10" min="0" step="1">
-              <input type="text" class="popup__input" placeholder="Промокод" form="form-popup">
+              <input type="number" class="popup__input mt-2" placeholder="Введіть кількість" form="form-popup" max="10"
+                min="1" step="1" name="count" id="order-count" required>
+              <input type="text" class="popup__input mt-2" placeholder="Промокод" form="form-popup" name="promo"
+                id="order-promo">
             </div>
           </div>
         </div>
-        <div class="modal-footer">
-          <form action="#" class="popup__form" id="form-popup">
-            <a href="#" class="popup__policy">Политика безопасности</a>
-            <button class="button popup__button">Перейти к оплате</button>
+        <div class="modal-footer justify-content-start">
+          <div class="popup__buttons">
+            <div class="popup__order-info ">
+              <h4 class="popup__order-title fw-bold mb-1">Вибраний тариф</h4>
+              <input type="text" class="popup__order-name text-decoration-underline mb-2" id="order-name"
+                form="form-popup" name="tariff" readonly>
+            </div>
+            <button class="button popup__button" type="submit">Перейти до оплати</button>
             <div class="popup__total">
-              <p class="popup__total-text">Сумма к оплате (руб):
-                <span class="popup__total-count">2700</span>
+              <p class="popup__total-text">Всього до сплати:
+                <span class="popup__total-count fw-bold"></span>
               </p>
             </div>
-          </form>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
   </div>
   <section class="hero">
@@ -118,15 +132,16 @@
             <div class="row">
               <nav class="menu navbar navbar-expand-xl">
                 <div class="col-8 col-xl-2 flex-shrink-0">
-                  <a class="header__logo" href="index.html">
+                  <a class="header__logo" href="/">
                     <img src="img/logo.svg" alt="BetVDS">
                   </a>
                 </div>
 
                 <div class="col-4 d-flex justify-content-end d-xl-none">
-                  <button class="navbar-toggler button button-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#burger-menu" aria-controls="burger-menu" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                  <button
+                    class="navbar-toggler button button-toggler d-flex justify-content-around align-items-center flex-column py-1 px-0"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#burger-menu" aria-controls="burger-menu"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <div class="button-toggler__arrow"></div>
                     <div class="button-toggler__arrow"></div>
                     <div class="button-toggler__arrow"></div>
@@ -135,18 +150,19 @@
 
                 <div class="col-12 col-xl-10">
                   <div class="collapse navbar-collapse justify-content-end" id="burger-menu">
-                    <ul class="menu__list">
+                    <ul
+                      class="menu__list d-flex justify-content-xl-end justify-content-sm-between justify-content-center align-items-center flex-column flex-sm-row py-2 py-sm-3">
                       <li class="menu__list-item">
-                        <a class="menu__list-link" href="#">Купить VDS</a>
+                        <a class="menu__list-link" href="#buy">Придбати VDS</a>
                       </li>
                       <li class="menu__list-item">
-                        <a class="menu__list-link" href="#">О продукте</a>
+                        <a class="menu__list-link" href="#about">Про нас</a>
                       </li>
                       <li class="menu__list-item">
-                        <a class="menu__list-link" href="#">FAQ</a>
+                        <a class="menu__list-link" href="#faq">FAQ</a>
                       </li>
                     </ul>
-                    <button class="button header__btn">Тех. Поддержка</button>
+                    <a href="tel:+00000000" class="button header__btn d-block">Teх. підтримка</a>
                   </div>
                 </div>
               </nav>
@@ -155,38 +171,41 @@
         </div>
         </nav>
       </header>
-      <div class="hero__body">
+      <div class="hero__body d-flex flex-column justify-content-center align-items-center text-center">
         <div class="container-fluid">
-          <h2 class="hero__title">ЛУЧШЕЕ СОЧЕТАНИЕ</h2>
+          <h2 class="hero__title fw-bold text-uppercase">Кращий вибір</h2>
 
           <div class="row justify-content-around">
             <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
               <div class="hero__item">
                 <img src="img/hero/hero-icon-1.svg" alt="АНОНИМНОСТЬ" class="hero__item-img mx-auto">
-                <span class="hero__item-text">АНОНИМНОСТЬ</span>
+                <span class="hero__item-text text-uppercase">Анонімність</span>
               </div>
             </div>
             <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
               <div class="hero__item">
                 <img src="img/hero/hero-icon-2.svg" alt="БЕЗОПАСНОСТЬ" class="hero__item-img mx-auto">
-                <span class="hero__item-text">БЕЗОПАСНОСТЬ</span>
+                <span class="hero__item-text text-uppercase">Безпека</span>
               </div>
             </div>
             <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
               <div class="hero__item">
                 <img src="img/hero/hero-icon-3.svg" alt="МОЩНОСТЬ" class="hero__item-img mx-auto">
-                <span class="hero__item-text">МОЩНОСТЬ</span>
+                <span class="hero__item-text text-uppercase">Потужність</span>
               </div>
             </div>
           </div>
 
           <p class="hero__text">
-            <span class="text-accent">VDS</span> - это виртуально созданный ПК с нужными вам конфигурациями.
-            Это отличное решение для полной анонимности и получения необходимой мощности для решения различных
+            <span class="text-warning">VDS</span> - це віртуально створений ПК із потрібними вам конфігураціями.
+            Це відмінне рішення для повної анонімності та отримання необхідної потужності для вирішення різних
             задач.
           </p>
 
-          <button class="hero__btn button" data-bs-toggle="modal" data-bs-target="#modal-payment">Купить VDS</button>
+          <a class="hero__btn button d-flex justify-content-start align-items-center mx-auto" href="#buy">
+            <img src="img/hero/hero-btn-icon.svg" alt="Server" class="hero__btn-icon me-1">
+            <span class="hero__btn-text">Придбати VDS</span>
+          </a>
 
         </div>
       </div>
@@ -198,64 +217,69 @@
       <div class="_container">
         <div class="container-fluid">
           <div class="advantage__wrapper">
-            <h2 class="title advantage__title">Преимущества</h2>
+            <h2 class="title advantage__title">Переваги</h2>
             <div class="advantage__body">
-              <div class="row row--top">
+              <div class="row">
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div class="advantage__card card-advantage">
+                  <div
+                    class="advantage__card card-advantage d-flex justify-content-between align-items-center flex-column text-center">
                     <img src="img/advantage/icon-rocket.svg" alt="" class="card-advantage__img">
-                    <h4 class="card-advantage__title">Скорость</h4>
-                    <p class="card-advantage__text">Интернет канал без ограничений
-                      Быстрый отклик</p>
+                    <h4 class="card-advantage__title">Швидкість</h4>
+                    <p class="card-advantage__text">Інтернет канал без обмежень</p>
                   </div>
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div class="advantage__card card-advantage">
+                  <div
+                    class="advantage__card card-advantage d-flex justify-content-between align-items-center flex-column text-center">
                     <img src="img/advantage/icon-gear.svg" alt="" class="card-advantage__img">
                     <h4 class="card-advantage__title">Софт</h4>
-                    <p class="card-advantage__text">Предустановлены популярные
-                      программы, в том числе и бот/сканер Betting Со</p>
+                    <p class="card-advantage__text">Попередньо встановлені популярні
+                      програми, у тому числі бот/сканер Betting Со</p>
                   </div>
                 </div>
 
                 <div class="col-12 col-lg-4">
-                  <div class="advantage__card card-advantage">
+                  <div
+                    class="advantage__card card-advantage d-flex justify-content-between align-items-center flex-column text-center">
                     <img src="img/advantage/icon-windows.svg" alt="" class="card-advantage__img">
                     <h4 class="card-advantage__title">Windows 10</h4>
-                    <p class="card-advantage__text">На всех решениях предустановлена
-                      сборка Windows 10</p>
+                    <p class="card-advantage__text">На всіх рішенях встановлена Windows 10</p>
                   </div>
                 </div>
               </div>
 
-              <div class="row row--bottom">
+              <div class="row mt-3 mt-md-5">
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div class="advantage__card card-advantage">
+                  <div
+                    class="advantage__card card-advantage d-flex justify-content-between align-items-center flex-column text-center">
                     <img src="img/advantage/icon-circlefork.svg" alt="" class="card-advantage__img">
-                    <h4 class="card-advantage__title">Оптимизация под вилки</h4>
-                    <p class="card-advantage__text">Стабильная работа бота и
-                      моментальная проставка
-                      плеч в сканере</p>
+                    <h4 class="card-advantage__title">Оптимізація під вилки</h4>
+                    <p class="card-advantage__text">Стабільна робота бота та
+                      миттєва проставка
+                      плечей у сканері Betting Co
+                    </p>
                   </div>
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div class="advantage__card card-advantage">
+                  <div
+                    class="advantage__card card-advantage d-flex justify-content-between align-items-center flex-column text-center">
                     <img src="img/advantage/icon-money-bag.svg" alt="" class="card-advantage__img">
-                    <h4 class="card-advantage__title">Оптимальная цена</h4>
+                    <h4 class="card-advantage__title">Оптимальна ціна</h4>
                     <p class="card-advantage__text">
-                      <span class="card-advantage__text-accent">400р - 7 дней</span>
-                      Одно из самых лучших предложений на рынке
+                      <span class="card-advantage__text d-block fw-bold">400грн - 7 днів</span>
+                      Одна з найкращих пропозицій на ринку
                     </p>
                   </div>
                 </div>
 
                 <div class="col-12 col-lg-4">
-                  <div class="advantage__card card-advantage">
+                  <div
+                    class="advantage__card card-advantage d-flex justify-content-between align-items-center flex-column text-center">
                     <img src="img/advantage/icon-fingerprint.svg" alt="" class="card-advantage__img">
-                    <h4 class="card-advantage__title">Уникализация</h4>
-                    <p class="card-advantage__text">Каждая виртуальная машина уникальна</p>
+                    <h4 class="card-advantage__title">Унікалізація</h4>
+                    <p class="card-advantage__text">Кожна віртуальна машина унікальна</p>
                   </div>
                 </div>
               </div>
@@ -268,51 +292,51 @@
     <section class="about">
       <div class="_container">
         <div class="container-fluid">
-          <h2 class="title about__title">О <span class="text-accent">продукте</span></h2>
-          <div class="about__body">
-            <p class="about__text"><span class="about__text-accent">VDS</span> - это виртуально созданный ПК с нужными
-              вам конфигурациями. Это отличное решение для полной анонимности и получения необходимой мощности для
-              решения различных задач.
-            </p>
+          <h2 class="title about__title text-start" id="about">Про <span class="text-warning fw-bold">нас</span></h2>
+          <div class="about__body d-flex justify-content-between flex-column">
+            <p class="about__text"><span class="about__text-warning">VDS</span> - це віртуально створений ПК із
+              потрібними
+              вам конфігураціями. Це відмінне рішення для повної анонімності та отримання необхідної потужності для
+              розв'язання різних завдань
+            <p>
             <p class="about__text">
-              Изначально мы создавали VDS под свои личные нужды (использование собственного ПО ), но увидев дефицит
-              качественного сервиса
-              <span class="about__text-accent">VDS для профессионалов</span>, мы решили предоставить его широкой
-              аудитории.
+              Спочатку ми створювали VDS під свої особисті потреби (використання власного ПЗ), але побачивши дефіцит
+              якісного сервісу
+              <span class="text-warning fw-bold">VDS для професіоналів</span>, ми вирішили надати його широкій
+              аудиторії.
             </p>
           </div>
           <div class="about__items">
-            <h4 class="about__sub-title title">Наши главные правила для всех продуктов: </h4>
+            <h4 class="about__subtitle title text-start ">Наші основні правила для всіх продуктів:</h4>
             <div class="row justify-content-between">
               <div class="col-md-4 col-lg-3">
-                <div class="about__item">
+                <div class="about__item d-flex flex-column justify-content-between align-items-center my-2 my-lg-0">
                   <img src="img/about/icon-1.svg" alt="" class="about__item-img mx-auto">
-                  <span class="about__item-text">Оперативная и адекватная
-                    поддержка</span>
+                  <span class="about__item-text text-center fw-bold">Оперативна підтримка</span>
                 </div>
               </div>
               <div class="col-md-4 col-lg-2">
-                <div class="about__item">
+                <div class="about__item d-flex flex-column justify-content-between align-items-center my-2 my-lg-0">
                   <img src="img/about/icon-2.svg" alt="" class="about__item-img mx-auto">
-                  <span class="about__item-text">Опытные разработчики</span>
+                  <span class="about__item-text text-center fw-bold">Досвідчені розробники</span>
                 </div>
               </div>
               <div class="col-md-4 col-lg-2">
-                <div class="about__item">
+                <div class="about__item d-flex flex-column justify-content-between align-items-center my-2 my-lg-0">
                   <img src="img/about/icon-3.svg" alt="" class="about__item-img mx-auto">
-                  <span class="about__item-text">Возможность сотрудничества</span>
+                  <span class="about__item-text text-center fw-bold">Можливості та співробніцтво</span>
                 </div>
               </div>
               <div class="col-md-6 col-lg-2">
-                <div class="about__item">
+                <div class="about__item d-flex flex-column justify-content-between align-items-center my-2 my-lg-0">
                   <img src="img/about/icon-4.svg" alt="" class="about__item-img mx-auto">
-                  <span class="about__item-text">Гибкая ценовая политика</span>
+                  <span class="about__item-text text-center fw-bold">Гнучка цінова політика</span>
                 </div>
               </div>
               <div class="col-md-6 col-lg-3">
-                <div class="about__item">
+                <div class="about__item d-flex flex-column justify-content-between align-items-center my-2 my-lg-0">
                   <img src="img/about/icon-5.svg" alt="" class="about__item-img mx-auto">
-                  <span class="about__item-text">Безопасность и анонимность </span>
+                  <span class="about__item-text text-center fw-bold">Безпека та анонімність</span>
                 </div>
               </div>
             </div>
@@ -324,175 +348,70 @@
     <section class="tariffs">
       <div class="_container">
         <div class="container-fluid">
-          <div class="tariffs__body">
-            <h2 class="title tariffs__title">Стоимость и оплата</h2>
+          <div class="tariffs__body" id="buy">
+            <h2 class="title tariffs__title">Вартість та оплата</h2>
             <div class="tariffs__cards">
-              <div class="row justify-content-center justify-content-xl-between">
-                <div class="col-md-6 col-xl-4">
-                  <div class="tariffs__card card-tariff">
-                    <h6 class="card-tariff__title">VDS</h6>
-
-                    <table class="card-tariff__table">
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">RAM</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">8 GB</td>
-                      </tr>
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">SSD Space</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">30 GB</td>
-                      </tr>
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">CPU Cores</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">2</td>
-                      </tr>
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">Bandwidth</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">1 TB</td>
-                      </tr>
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">Control Panel</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">Full</td>
-                      </tr>
-                    </table>
-
-                    <div class="card-tariff__info">
-                      <span class="card-tariff__info-date">7 дней</span>
-                      <span class="card-tariff__info-price">400₽</span>
-                    </div>
-
-                    <button class="card-tariff__button button">Заказать</button>
-                  </div>
-                </div>
-
-                <div class="col-md-6 col-xl-4">
-                  <div class="tariffs__card card-tariff">
-                    <h6 class="card-tariff__title">VDS</h6>
-
-                    <table class="card-tariff__table">
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">RAM</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">8 GB</td>
-                      </tr>
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">SSD Space</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">30 GB</td>
-                      </tr>
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">CPU Cores</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">2</td>
-                      </tr>
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">Bandwidth</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">1 TB</td>
-                      </tr>
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">Control Panel</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">Full</td>
-                      </tr>
-                    </table>
-
-                    <div class="card-tariff__info">
-                      <span class="card-tariff__info-date">14 дней</span>
-                      <span class="card-tariff__info-price">770₽</span>
-                    </div>
-
-                    <button class="card-tariff__button button">Заказать</button>
-                  </div>
-                </div>
-
-                <div class="col-md-6 col-xl-4">
-                  <div class="tariffs__card card-tariff">
-                    <h6 class="card-tariff__title">VDS</h6>
-
-                    <table class="card-tariff__table">
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">RAM</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">8 GB</td>
-                      </tr>
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">SSD Space</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">30 GB</td>
-                      </tr>
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">CPU Cores</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">2</td>
-                      </tr>
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">Bandwidth</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">1 TB</td>
-                      </tr>
-                      <tr class="card-tariff__table-row">
-                        <td class="card-tariff__table-cell card-tariff__table-info">Control Panel</td>
-                        <td class="card-tariff__table-cell card-tariff__table-value">Full</td>
-                      </tr>
-                    </table>
-
-                    <div class="card-tariff__info">
-                      <span class="card-tariff__info-date">30 дней</span>
-                      <span class="card-tariff__info-price">2700₽</span>
-                    </div>
-
-                    <button class="card-tariff__button button">Заказать</button>
-                  </div>
-                </div>
+              <div class="row justify-content-center justify-content-xl-center tariffs__card-body">
               </div>
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
 
     <section class="steps">
       <div class="_container">
         <div class="step-info">
-          <h4 class="step-info__title title">Как мне выбрать сервер?</h4>
+          <h4 class="step-info__title title" id="faq">Як мені вибрати сервер?</h4>
           <div class="step-info__text">
-            <p class="step-info__text-inner">Зарегистрироваться на сайте и оплатить виртуальный компьютер.</p>
-            <p class="step-info__text-inner">Далее подключиться к виртуальному компьютеру, то есть:</p>
+            <p class="step-info__text-inner">Зареєструватися на сайті та оплатити віртуальний комп'ютер.оплатить
+              виртуальный компьютер.</p>
+            <p class="step-info__text-inner">Далі підключитися до віртуального комп'ютера</p>
           </div>
 
           <div class="step-info__body">
             <div class="container-fluid">
               <div class="row flex-column flex-xl-row">
                 <div class="col-12 col-md-10 col-xl-12">
-                  <div class="step-info__item step-info__item--1">
-                    <div class="step-info__item-count">1</div>
-                    <span class="step-info__item-text">На своем компьютере нажать на кнопку пуск;</span>
+                  <div class="step-info__item step-info__item--1 d-flex">
+                    <div class="step-info__item-count d-flex justify-content-center align-items-center">1</div>
+                    <span class="step-info__item-text">На власному комп'ютері натиснути кнопку Пуск</span>
                   </div>
                 </div>
 
                 <div class="col-12 col-md-10 col-xl-12 align-self-md-end align-self-xl-auto">
-                  <div class="step-info__item step-info__item--2">
-                    <div class="step-info__item-count">2</div>
-                    <span class="step-info__item-text">В строке поиск напечатать подключение;</span>
+                  <div class="step-info__item step-info__item--2 d-flex">
+                    <div class="step-info__item-count d-flex justify-content-center align-items-center">2</div>
+                    <span class="step-info__item-text">В рядку пошуку написати підключення</span>
                   </div>
                 </div>
 
                 <div class="col-12 col-md-10 col-xl-12">
-                  <div class="step-info__item step-info__item--3">
-                    <div class="step-info__item-count">3</div>
-                    <span class="step-info__item-text">Выбрать подключение к удаленному рабочему столу;</span>
+                  <div class="step-info__item step-info__item--3 d-flex">
+                    <div class="step-info__item-count d-flex justify-content-center align-items-center">3</div>
+                    <span class="step-info__item-text">Вибрати підключення до віддаленого робочого столу</span>
                   </div>
                 </div>
 
                 <div class="col-12 col-md-10 col-xl-12 align-self-md-end align-self-xl-auto">
-                  <div class="step-info__item step-info__item--4">
-                    <div class="step-info__item-count">4</div>
-                    <span class="step-info__item-text">Напечатать айпи и порт слитно;</span>
+                  <div class="step-info__item step-info__item--4 d-flex">
+                    <div class="step-info__item-count d-flex justify-content-center align-items-center">4</div>
+                    <span class="step-info__item-text">Надрукувати айпі та порт разом</span>
                   </div>
                 </div>
 
                 <div class="col-12 col-md-10 col-xl-12">
-                  <div class="step-info__item step-info__item--5">
-                    <div class="step-info__item-count">5</div>
-                    <span class="step-info__item-text">Далее выбрать Administrator и пароль;</span>
+                  <div class="step-info__item step-info__item--5 d-flex">
+                    <div class="step-info__item-count d-flex justify-content-center align-items-center">5</div>
+                    <span class="step-info__item-text">Далі вибрати Administrator та пароль</span>
                   </div>
                 </div>
 
                 <div class="col-12 col-md-10 col-xl-12 align-self-md-end align-self-xl-auto">
-                  <div class="step-info__item step-info__item--6">
-                    <div class="step-info__item-count">6</div>
-                    <span class="step-info__item-text">Задать свой пароль;</span>
+                  <div class="step-info__item step-info__item--6 d-flex">
+                    <div class="step-info__item-count d-flex justify-content-center align-items-center">6</div>
+                    <span class="step-info__item-text">Задати свій пароль</span>
                   </div>
                 </div>
               </div>
@@ -500,24 +419,31 @@
           </div>
         </div>
 
-        <h2 class="title steps__title">Общие вопросы</h2>
+        <h2 class="title steps__title">Загальні питання</h2>
         <div class="steps__body">
           <ol class="steps__list list-steps">
             <li class="list-steps__item">
-              <h6 class="list-steps__title list-steps__title--1">Какой нужен компьютер для работы с виртуальными
-                машинами?</h6>
-              <p class="list-steps__text">Для удаленного подключения к виртуальной машине подойдет практически любой
-                компьютер, главное ,чтобы скорость вашего Интернета была от 5 мбит/сек.</p>
+              <h6 class="list-steps__title list-steps__title--1">
+                <span class="list-steps__subtitle fw-bold me-1">1.1</span>
+                Який потрібен комп'ютер для роботи з віртуальними
+                машинами?
+              </h6>
+              <div class="list-steps__text-block d-flex flex-column justify-content-between">
+                <p class="list-steps__text">Для віддаленого підключення до віртуальної машини підійде практично будь-яка
+                  комп'ютер, головне щоб швидкість вашого Інтернету була від 5 мбіт/сек.</p>
+              </div>
             </li>
             <li class="list-steps__item">
-              <h6 class="list-steps__title list-steps__title--2">Зачем мне нужны ваши виртуальные машины?</h6>
-              <p class="list-steps__text">Большинство букмекерских контор борются с вилочниками и стараются вычислить
-                их. При вычислении БК могут порезать лимиты, порезать линию и отправить на дополнительную верификацию
-                для выплаты выигрыша.</p>
-              <p class="list-steps__text">Службы безопасности БК обращают внимание на ваши действия и так же они смотрят
-                на железо (компьютер) с которого вы заходите в БК. Например, у контор 1хбет, мелбет и мостбет службы
-                безопасности сотрудничают друг с другом. И они могут заметить, что с одного и того же ip играет
-                несколько аккаунтов. Это называется мультиаккаунтингом, и за это блокируют</p>
+              <h6 class="list-steps__title list-steps__title--2">
+                <span class="list-steps__subtitle fw-bold me-1">1.2</span>
+                Навіщо використовувати ваші віртуальні машини?
+              </h6>
+              <div class="list-steps__text-block d-flex flex-column justify-content-between">
+                <p class="list-steps__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci
+                  id, unde perferendis accusamus cupiditate?</p>
+                <p class="list-steps__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci
+                  id, unde perferendis accusamus cupiditate?</p>
+              </div>
             </li>
           </ol>
         </div>
@@ -526,28 +452,30 @@
 
     <section class="questions">
       <div class="_container">
-        <div class="questions__body">
-          <h2 class="questions__title title">Остались вопросы?</h2>
-          <span class="questions__text">Напишите нам на наш E-mail, и мы с радостью ответим на все ваши вопросы!</span>
-          <button class="questions__button button">Написать</button>
+        <div class="questions__body d-flex  justify-content-between align-items-center flex-column">
+          <h2 class="questions__title title">Залишились запитання?</h2>
+          <span class="questions__text text-center">Напишіть нам на E-mail та ми з радістю відповідмо на всі ваші
+            запитання</span>
+          <a href="mailto:test@mail.com" class="button d-flex justify-content-center align-items-center px-2">
+            <img src="img/questions/icon-mail.svg" alt="Email" class="questions__button-icon me-1">
+            Написати
+          </a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer py-3 bg-warning">
     <div class="_container">
-      <div class="footer__body">
-        <a class="footer__logo" href="index.html">
+      <div
+        class="footer__body d-flex justify-content-between align-items-center flex-column flex-sm-row align-items-sm-start">
+        <a class="footer__logo" href="/">
           <img src="img/logo.svg" alt="BetVDS">
         </a>
-
-        <span class="footer__copy">© Все права защищены. All Rights Reserved. 2021 BetVDS</span>
       </div>
     </div>
   </footer>
-  <script src="js/libs.min.js"></script>
-  <script src="js/main.min.js"></script>
+  <script src="js/main.bundle.js"></script>
 </body>
 
 </html>

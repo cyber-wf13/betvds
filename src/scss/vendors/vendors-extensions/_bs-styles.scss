@@ -28,10 +28,10 @@
   }
 }
 
-.modal-footer {
-  justify-content: flex-start;
-}
-
 .modal-content {
   padding-top: 50px;
+}
+
+.invalid-feedback {
+  @include adaptiv-value(font-size, 21, 13, 1);
 }

@@ -34,7 +34,7 @@
 <body>
   <div class="modal fade " id="modal-payment" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog popup">
-      <form class="modal-content" id="form-popup">
+      <form class="modal-content " id="form-popup" novalidate>
         <button type="button" class="btn-close popup__close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="modal-body">
           <div class="popup__item">
@@ -87,8 +87,7 @@
             </div>
             <div class="popup__content">
               <input type="email" class="popup__input mt-2" placeholder="E-mail" form="form-popup" name="email"
-                id="order-email">
-              <!-- required  -->
+                id="order-email" required>
             </div>
           </div>
           <div class="popup__item">
@@ -101,13 +100,13 @@
             </div>
             <div class="popup__content">
               <input type="number" class="popup__input mt-2" placeholder="Введіть кількість" form="form-popup" max="10"
-                min="1" step="1" name="count" id="order-count">
+                min="1" step="1" name="count" id="order-count" required>
               <input type="text" class="popup__input mt-2" placeholder="Промокод" form="form-popup" name="promo"
                 id="order-promo">
             </div>
           </div>
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer justify-content-start">
           <div class="popup__buttons">
             <div class="popup__order-info ">
               <h4 class="popup__order-title fw-bold mb-1">Вибраний тариф</h4>
@@ -133,7 +132,7 @@
             <div class="row">
               <nav class="menu navbar navbar-expand-xl">
                 <div class="col-8 col-xl-2 flex-shrink-0">
-                  <a class="header__logo" href="index.html">
+                  <a class="header__logo" href="/">
                     <img src="img/logo.svg" alt="BetVDS">
                   </a>
                 </div>
@@ -163,7 +162,7 @@
                         <a class="menu__list-link" href="#faq">FAQ</a>
                       </li>
                     </ul>
-                    <button class="button header__btn">Teх. підтримка</button>
+                    <a href="tel:+00000000" class="button header__btn d-block">Teх. підтримка</a>
                   </div>
                 </div>
               </nav>
@@ -203,7 +202,7 @@
             задач.
           </p>
 
-          <a class="hero__btn button d-flex justify-content-between align-items-center mx-auto" href="#buy">
+          <a class="hero__btn button d-flex justify-content-start align-items-center mx-auto" href="#buy">
             <img src="img/hero/hero-btn-icon.svg" alt="Server" class="hero__btn-icon me-1">
             <span class="hero__btn-text">Придбати VDS</span>
           </a>
@@ -457,10 +456,10 @@
           <h2 class="questions__title title">Залишились запитання?</h2>
           <span class="questions__text text-center">Напишіть нам на E-mail та ми з радістю відповідмо на всі ваші
             запитання</span>
-          <button class="questions__button button d-flex justify-content-center align-items-center">
+          <a href="mailto:test@mail.com" class="button d-flex justify-content-center align-items-center px-2">
             <img src="img/questions/icon-mail.svg" alt="Email" class="questions__button-icon me-1">
             Написати
-          </button>
+          </a>
         </div>
       </div>
     </section>
@@ -470,7 +469,7 @@
     <div class="_container">
       <div
         class="footer__body d-flex justify-content-between align-items-center flex-column flex-sm-row align-items-sm-start">
-        <a class="footer__logo" href="index.html">
+        <a class="footer__logo" href="/">
           <img src="img/logo.svg" alt="BetVDS">
         </a>
       </div>
